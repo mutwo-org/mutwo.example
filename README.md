@@ -28,7 +28,7 @@ If your provided functionality doesn't fit to any of the submodules scope it is 
 ## Adding and running tests
 
 You can write tests using pythons buildin [unittest module](https://docs.python.org/3/library/unittest.html) inside the `tests` directory.
-It may be best practice to repeat mutwos module structure inside the test directory (e.g. if you add a functionality in the `generators` package you should add a `package` directory inside the `tests` directory, where you will add the respective test files).
+It may be best practice to repeat mutwos module structure inside the test directory (e.g. if you add a functionality in the `generators` package you should add a `generators` directory inside the `tests` directory, where you will add the respective test files).
 To run the tests you can use the `run_tests.sh` bash script, which will create a virtual environment at the `/tmp` directory where the tests will be executed.
 
 ```sh
