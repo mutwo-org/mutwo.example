@@ -21,7 +21,7 @@ Remove the hidden `.git` directory and make a new git project and upload it.
 
 ## Adding new features
 
-For adding new features it is the best if you adjust to mutwos internal structure and add them at the fitting submodule in [mutwo/ext](https://github.com/mutwo-org/mutwo.ext-example/tree/main/mutwo/ext).
+For adding new features it is the best if you adjust to mutwos internal structure and add them at the fitting submodule in [mutwo](https://github.com/mutwo-org/mutwo.ext-example/tree/main/mutwo).
 More information regarding the scope of the single modules can be found at the docstrings of the `__init__.py` files in mutwos core module (for instance [here](https://github.com/mutwo-org/mutwo/blob/main/mutwo/core/events/__init__.py)).
 If your provided functionality doesn't fit to any of the submodules scope it is best to first add a new submodule in [mutwos core package](https://github.com/mutwo-org/mutwo/tree/main/mutwo/core) and the respective boilerplate code in [mutwos ext package](https://github.com/mutwo-org/mutwo/tree/main/mutwo/ext).
 
