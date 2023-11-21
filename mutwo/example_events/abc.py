@@ -17,4 +17,4 @@ class AbstractExampleEvent(core_events.SimpleEvent):
     @abc.abstractclassmethod
     @property
     def constant_duration(cls) -> core_constants.DurationType:
-        raise NotImplementedError
+        """A duration that doesn't change"""

@@ -1,20 +1,18 @@
 import setuptools  # type: ignore
 
-MAJOR, MINOR, PATCH = 0, 55, 0
-VERSION = f"{MAJOR}.{MINOR}.{PATCH}"
-"""This project uses semantic versioning.
-See https://semver.org/
-Before MAJOR = 1, there is no promise for
-backwards compatibility between minor versions.
-"""
+version = {}
+with open("mutwo/core_version/__init__.py") as fp:
+    exec(fp.read(), version)
+
+VERSION = version["VERSION"]
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-extras_require = {"testing": ["nose", "coveralls"]}
+extras_require = {"testing": ["pytest>=7.1.1"]}
 
 setuptools.setup(
-    name="mutwo.ext-example",
+    name="mutwo.example",
     version=VERSION,
     license="GPL",
     description="example extension for event based framework for generative art",
@@ -22,8 +20,8 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     author="AUTHOR_NAME",
     author_email="AUTHOR_EMAIL",
-    url="https://github.com/mutwo-org/mutwo.ext-example",
-    project_urls={"Documentation": "https://mutwo.readthedocs.io/en/latest/"},
+    url="https://github.com/mutwo-org/mutwo.example",
+    project_urls={"Documentation": "https://mutwo-org.github.io"},
     packages=[
         package
         for package in setuptools.find_namespace_packages(include=["mutwo.*"])
@@ -31,8 +29,8 @@ setuptools.setup(
     ],
     setup_requires=[],
     install_requires=[
-        "mutwo.ext-core>=0.55.0, <0.56.0",
+        "mutwo.core>=1.0.0, <2.0.0",
     ],
     extras_require=extras_require,
-    python_requires=">=3.9, <4",
+    python_requires=">=3.10, <4",
 )
